@@ -56,6 +56,7 @@ window.addEventListener("DOMContentLoaded", function() {
   job.textContent = item.job;
   info.textContent = item.text;
 });
+//creatinf showpeson function
 function showPerson(){
   const item = reviews[currentItem];
   img.src = item.img;
@@ -63,6 +64,7 @@ function showPerson(){
   job.textContent = item.job;
   info.textContent = item.text;
 }
+//showing next person
 nextbtn.addEventListener("click", function(){
   currentItem++;
   if(currentItem > reviews.length - 1){
@@ -70,6 +72,7 @@ nextbtn.addEventListener("click", function(){
   }
   showPerson(currentItem);
 });
+//showing previous person
 prevbtn.addEventListener("click", function(){
   currentItem--;
   if(currentItem < 0){
@@ -77,6 +80,7 @@ prevbtn.addEventListener("click", function(){
   }
   showPerson(currentItem);
 });
+//showing random person
 randombtn.addEventListener("click", function(){
   currentItem = Math.floor(Math.random() * reviews.length);
   showPerson(currentItem);
